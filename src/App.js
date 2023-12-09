@@ -2,74 +2,41 @@ import React, { Component } from 'react';
 import './App.css';
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      count: 0,//initialising count
-      history: [],//intialising history list
-    };
-  }
+  state = {
+    count: 0,
+    history: [],
+  };
 
   incrementCounter = () => {
-    const { count } = this.state;
-   
-      this.setState(
-        {
-          count: count + 1, //increment counter on click
-        },
-        () => this.updateHistory(this.state.count)
-      );
-    
+    this.setState((prevState) => ({
+      count: prevState.count + 1,
+    }), () => this.updateHistory());
   };
 
   reset = () => {
-   
-  
-      this.setState(
-        {
-          count:0 //reset counter
-        }
-      );
-    
+    this.setState({
+      count: 0,
+    });
   };
-
 
   resetHistory = () => {
-   
-  
-    this.setState(
-      {
-        history: [] //reset list 
-      }
-    );
-  
-};
-
-
-  decrementCounter = () => {
-    const { count } = this.state;
-  
-      this.setState(
-        {
-          count: count - 1,//decrement on click
-        },
-        () => this.updateHistory(this.state.count)
-      );
-    
+    this.setState({
+      history: [],
+    });
   };
 
-  updateHistory = (value) => {
-    // Keep track of the latest 5 results
-    const { history } = this.state;
-    if (history.length >= 5) {
-      this.setState({
-        history: [value, ...history.slice(0, 4)],
-      });
-    } else {
-      this.setState({
-        history: [value, ...history],
-      });
-    }
+  decrementCounter = () => {
+    this.setState((prevState) => ({
+      count: prevState.count - 1,
+    }), () => this.updateHistory());
+  };
+
+  updateHistory = () => {
+    const { count, history } = this.state;
+    const updatedHistory = [count, ...history.slice(0, 4)];
+    this.setState({
+      history: updatedHistory,
+    });
   };
 
   render() {
@@ -99,17 +66,21 @@ class App extends Component {
           Count: {count}
         </div>
 
-        <div className="history-container">
-          <h2>History</h2>
-          {history.map((item, index) => (
-            <div key={index} className="history-card">
-              {item}
-            </div>
-          ))}
-        </div>
+        <History history={history} />
       </div>
     );
   }
 }
+
+const History = ({ history }) => (
+  <div className="history-container">
+    <h2>History</h2>
+    {history.map((item, index) => (
+      <div key={index} className="history-card">
+        {item}
+      </div>
+    ))}
+  </div>
+);
 
 export default App;
