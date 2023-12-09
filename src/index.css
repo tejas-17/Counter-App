@@ -5,61 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f4f4f4;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
 }
 
-.App {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-}
-
-.header {
-  background-color: #3498db;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-
-.button-container {
-  display: flex;
-  justify-content: space-around;
-  padding: 20px;
-}
-
-button {
-  background-color: #3498db;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #2980b9;
-}
-
-.count {
-  font-size: 24px;
-  text-align: center;
-  padding: 20px;
-}
-
-.history-container {
-  padding: 20px;
-}
-
-.history-card {
-  background-color: #ecf0f1;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
