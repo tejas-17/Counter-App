@@ -17,7 +17,7 @@
 .increment-button,
 .decrement-button {
   background-color: #4caf50;
-  color: rgb(245, 171, 171);
+  color: green;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
