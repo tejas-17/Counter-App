@@ -20,24 +20,12 @@ Use this command to start the development server. Open http://localhost:3000 to 
 App Features
 The Counter App has the following features:
 
-Increment
-Click the "Increment" button to increase the count by 1.
-
-Decrement
-Click the "Decrement" button to decrease the count by 1.
-
-Reset
-Click the "Reset" button to reset the count to 0.
-
-Reset History
-Click the "Reset History" button to clear the history of previous counts.
-
-Count Display
-The current count is displayed on the screen.
-
-History Display
-The history section shows the last 5 counts in reverse chronological order.
-
+Increment: Click the "Increment" button to increase the count by 1.
+Decrement: Click the "Decrement" button to decrease the count by 1.
+Reset: Click the "Reset" button to reset the count to 0.
+Reset History: Click the "Reset History" button to clear the history of previous counts.
+Count Display: The current count is displayed on the screen.
+History Display: The history section shows the last 5 counts in reverse chronological order.
 Code Structure
 The main logic of the Counter App is implemented in the App component. The history is displayed using the History component.
 
@@ -63,3 +51,9 @@ const History = ({ history }) => (
 export default App;
 Usage
 Feel free to use, modify, or extend this Counter App for your React projects. It's a great starting point for learning React state management and component interactions. Enjoy coding!
+
+
+
+
+
+
