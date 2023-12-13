@@ -1,27 +1,17 @@
 .App {
   text-align: center;
   font-family: Arial, sans-serif;
-  background-color: #f7f7f7;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  max-width: 400px;
-  margin: 0 auto;
 }
 
 .header {
-  background-color: #3498db;
+  background-color: #f2f2f2;
   padding: 10px;
-  font-size: 24px;
-  color: #fff;
-  border-radius: 8px 8px 0 0;
-  margin-bottom: 20px;
+  font-size: 20px;
+  border-bottom: 1px solid #ddd;
 }
 
 .button-container {
-  display: flex;
-  justify-content: center;
+  margin-top: 20px;
 }
 
 .increment-button,
@@ -31,52 +21,22 @@
   border: none;
   padding: 10px 20px;
   cursor: pointer;
-  margin: 5px;
-  font-size: 16px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.increment-button:hover,
-.decrement-button:hover {
-  background-color: #45a049;
+  margin: 10px;
 }
 
 .count {
-  font-size: 36px;
-  margin-top: 20px;
-  color: #3498db;
-  animation: pulse 1s infinite alternate; /* Pulsating animation */
+  font-size: 24px;
+  margin-top: 25px;
 }
 
 .history-container {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .history-card {
-  background-color: #fff;
+  background-color: #f2f2f2;
   padding: 10px;
   border: 1px solid #ddd;
   margin: 5px;
   font-size: 16px;
-  border-radius: 5px;
-  opacity: 0;
-  animation: fadeIn 0.5s forwards; /* Fade-in animation */
-}
-
-/* Keyframes for animations */
-
-@keyframes pulse {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.1);
-  }
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
 }
