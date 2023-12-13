@@ -1,4 +1,6 @@
 React Counter App Readme
+
+git link yo repository:- https://github.com/tejas-17/Counter-App/tree/master
 Introduction
 This React Counter App is a simple application that allows users to increment, decrement, reset the counter, and view the history of previous counts. It serves as a basic example of a React application with state management.
 
